@@ -707,7 +707,7 @@ button {
     position: relative;
 
     /* Flex box */
-    display: flex;
+    display: inline-flex;
     column-gap: 56px;
 }
 
@@ -756,6 +756,10 @@ button {
 
     /* User action */
     cursor: pointer;
+}
+
+.tab__item:hover {
+    opacity: 0.5;
 }
 
 .tab__icon {
@@ -820,6 +824,10 @@ button {
     /* Text */
     font-size: 1.6rem;
     font-weight: 500;
+}
+
+.tab__content-more:hover {
+    opacity: 0.5;
 }
 
 .tab__content-more::after {
