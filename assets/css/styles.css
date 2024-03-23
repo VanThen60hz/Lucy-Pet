@@ -18,6 +18,7 @@
     --more-color: #ff5d31;
     --service-item-more-color: #34396a;
     --pricing-item-heading-color: #3f4065;
+    --control-color: #ffd1c4;
 
     /* Border */
     --btn-border: rgba(0, 9, 88, 0.7);
@@ -1443,4 +1444,68 @@ button {
 
     /* Box model */
     margin-right: 14px;
+}
+
+.pricing-item--active {
+    /* Box model */
+    box-shadow: 0px 20px 44px 0px rgba(195, 108, 22, 0.06);
+}
+
+/* Review */
+.review {
+    /* Box model */
+    padding: 53px 0;
+}
+
+.review__inner {
+    /* Flex box */
+    display: flex;
+    align-items: center;
+    column-gap: 44px;
+}
+
+.review__control {
+    /* Flex box */
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Box model */
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    border: 1px solid var(--control-color);
+
+    /* Color */
+    color: var(--primary-color);
+    background: transparent;
+}
+
+.review__control:hover {
+    /* Color */
+    color: #fff;
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.review-item {
+    /* Flex box */
+    display: flex;
+}
+
+.review-item__media {
+    /* Flex box */
+    flex-shrink: 0;
+
+    /* Box model */
+    width: 274px;
+}
+
+.review-item__img {
+    /* Box model */
+    width: 100%;
+
+    /* Image */
+    object-fit: cover;
 }
