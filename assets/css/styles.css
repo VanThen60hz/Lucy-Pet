@@ -19,6 +19,7 @@
     --service-item-more-color: #34396a;
     --pricing-item-heading-color: #3f4065;
     --control-color: #ffd1c4;
+    --review-item-author: #282828;
 
     /* Border */
     --btn-border: rgba(0, 9, 88, 0.7);
@@ -1492,20 +1493,131 @@ button {
 .review-item {
     /* Flex box */
     display: flex;
+    align-items: center;
+    column-gap: 115px;
 }
 
 .review-item__media {
+    /* Positioning */
+    position: relative;
+
     /* Flex box */
     flex-shrink: 0;
 
     /* Box model */
     width: 274px;
+    border-radius: 137px;
+}
+
+.review-item__media::after {
+    /* Content */
+    content: "";
+
+    /* Positioning */
+    position: absolute;
+    inset: auto 0 0;
+
+    /* Box model */
+    height: 82%;
+    border-radius: inherit;
+
+    /* Color */
+    background: #ffda54;
 }
 
 .review-item__img {
+    /* Positioning */
+    position: relative;
+    z-index: 1;
+
+    /* Display */
+    display: block;
+    margin-top: -52px;
+
     /* Box model */
     width: 100%;
+    border-radius: inherit;
 
     /* Image */
     object-fit: cover;
+}
+
+.review-item__quote {
+    /* Box model */
+    width: 553px;
+    margin-top: 24px;
+
+    /* Color */
+    color: #000;
+
+    /* Text */
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.56;
+}
+
+.review-item__author {
+    /* Flex box */
+    display: flex;
+    align-items: center;
+
+    /* Box model */
+    margin-top: 34px;
+
+    /* Color */
+    color: var(--review-item-author);
+
+    /* Text */
+    font-family: var(--secondary-font);
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.review-item__author::before {
+    /* Display */
+    display: inline-block;
+
+    /* Content */
+    content: "";
+
+    /* Box model */
+    width: 20px;
+    height: 2px;
+    margin-right: 8px;
+    background: #000;
+}
+
+.review__dots {
+    /* Flex box */
+    display: flex;
+    justify-content: center;
+    column-gap: 8px;
+
+    /* Box model */
+    margin-top: 56px;
+}
+
+.review__dot {
+    /* Box model */
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    border: 1px solid var(--primary-color);
+}
+
+.review__dot:hover {
+    /* Color */
+    background: var(--primary-color);
+
+    /* User action */
+    cursor: pointer;
+}
+
+.review__dot--active {
+    /* Box model */
+    width: 24px;
+
+    /* Color */
+    background: var(--primary-color);
 }
