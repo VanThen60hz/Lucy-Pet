@@ -227,10 +227,20 @@ button {
     font-weight: 500;
 }
 
+.header-action__link:hover {
+    /* Visibility */
+    opacity: 0.7;
+}
+
 .navbar__link:hover {
     /* Text */
     color: var(--nav-link-hover-color);
     text-shadow: 1px 0 0 currentColor;
+}
+
+.header-action__btn:hover {
+    /* Color */
+    border-color: transparent;
 }
 
 /* Hero */
@@ -1811,8 +1821,8 @@ button {
     flex-shrink: 0;
 
     /* Box model */
-    width: 46px;
-    height: 46px;
+    width: 45px;
+    height: 45px;
     margin-right: -1px;
     border-radius: 22.5px;
 
