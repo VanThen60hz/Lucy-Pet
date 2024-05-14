@@ -1001,7 +1001,7 @@ button {
 
 .service-item__more {
     /* Flex box */
-    display: flex;
+    display: inline-flex;
     align-items: center;
 
     /* Color */
