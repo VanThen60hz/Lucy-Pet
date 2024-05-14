@@ -18,6 +18,7 @@
 
         <!-- Style css -->
         <link rel="stylesheet" href="./assets/css/styles.css" />
+        <link rel="stylesheet" href="./assets/css/responsive.css" />
 
         <!-- Favicon -->
         <link
@@ -102,11 +103,24 @@
         <header class="header fixed">
             <div class="container">
                 <div class="header__inner">
+                    <!-- Table/mobile menu -->
+                    <label for="menu-checkbox" class="toggle-menu">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512"
+                        >
+                            <path
+                                fill="currentColor"
+                                d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"
+                            />
+                        </svg>
+                    </label>
+
                     <!-- Logo -->
                     <img src="./assets/img/logo.svg" alt="Lucy" class="logo" />
 
                     <!-- Navbar -->
-                    <nav class="navbar">
+                    <nav class="navbar" id="pc-nav">
                         <ul class="navbar__list">
                             <li class="navbar__item">
                                 <a href="#!" class="navbar__link">Home</a>
@@ -127,6 +141,13 @@
                                     Contacts us
                                 </a>
                             </li>
+
+                            <li class="navbar__item show-on-mobile separate">
+                                <a href="#!" class="navbar__link">Sign in</a>
+                            </li>
+                            <li class="navbar__item show-on-mobile">
+                                <a href="#!" class="navbar__link">Sign up</a>
+                            </li>
                         </ul>
                     </nav>
 
@@ -139,8 +160,37 @@
             </div>
         </header>
 
+        <!-- Tablet/mobile header -->
+        <header class="mobile-header header">
+            <input
+                type="checkbox"
+                name=""
+                id="menu-checkbox"
+                class="menu-checkbox"
+                hidden
+            />
+
+            <!-- Overlay -->
+            <label for="menu-checkbox" class="menu-overlay"></label>
+
+            <!-- Menu content -->
+            <div class="menu-drawer">
+                <!-- Logo -->
+                <a href="#">
+                    <img
+                        src="./assets/img/logo.png"
+                        alt="Shine simle."
+                        class="mobile-logo"
+                    />
+                </a>
+
+                <!-- Navigation -->
+                <nav id="mobile-nav"></nav>
+            </div>
+        </header>
+
         <!-- Hero -->
-        <section class="hero">
+        <section class="hero" style="display: none">
             <div class="container">
                 <div class="hero__inner">
                     <!-- Hero media -->
@@ -255,7 +305,7 @@
             </div>
         </section>
 
-        <main class="main">
+        <main class="main" style="display: none">
             <!-- About -->
             <section class="about">
                 <div class="container">
@@ -1064,7 +1114,7 @@
             </section>
         </main>
 
-        <footer class="footer">
+        <footer class="footer" style="display: none">
             <div class="container">
                 <div class="footer__inner">
                     <div class="footer__left">
@@ -1291,5 +1341,12 @@
                 </div>
             </div>
         </footer>
+
+        <script>
+            const pcNav = document.querySelector("#pc-nav");
+            const mobileNav = document.querySelector("#mobile-nav");
+
+            mobileNav.innerHTML = pcNav.innerHTML;
+        </script>
     </body>
 </html>
