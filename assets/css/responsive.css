@@ -112,6 +112,24 @@
     .hero__desc {
         font-size: 2.4rem;
     }
+
+    .about__inner {
+        grid-template-columns: auto;
+        width: 95%;
+        margin-left: auto;
+    }
+
+    .about__img--wrapper {
+        margin-left: 90px;
+    }
+
+    .about__media:nth-child(3) > .about__img--wrapper {
+        margin-left: 0;
+    }
+
+    .about__media-decor {
+        right: 0;
+    }
 }
 
 /* Tablet */
@@ -129,6 +147,14 @@
 
     .header-action {
         display: none;
+    }
+
+    .section-heading {
+        font-size: 3rem;
+    }
+
+    .hero__content {
+        width: 95%;
     }
 
     .hero__img-wrap {
@@ -161,5 +187,72 @@
 
     .hero__row {
         margin-top: 20px;
+    }
+
+    .about__content {
+        width: 95%;
+    }
+
+    .about__media-decor {
+        display: none;
+    }
+
+    .about__img--wrapper {
+        width: 90%;
+    }
+
+    .about__img {
+        width: 90%;
+    }
+
+    .about__card {
+        z-index: 1;
+        top: -40px;
+    }
+
+    .about__img--wrapper {
+        margin-left: 40px;
+    }
+
+    .about__desc-bottom {
+        margin: 15px 0 35px;
+        width: 100%;
+    }
+
+    .about__checklist {
+        gap: 20px;
+    }
+
+    .about__check-item {
+        font-size: 1.4rem;
+    }
+
+    .about__check-item::before {
+        flex-shrink: 0;
+    }
+
+    .about__check-item::after {
+        top: 4px;
+    }
+
+    .tab__list {
+        justify-content: space-between;
+        column-gap: 10px;
+    }
+
+    .tab__item--active::after {
+        width: 100%;
+    }
+
+    .tab__title {
+        font-size: 1.4rem;
+    }
+
+    :is(.about__heading, .about__desc) {
+        width: 100%;
+    }
+
+    .tab__content__desc {
+        width: auto;
     }
 }
